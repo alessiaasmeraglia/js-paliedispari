@@ -10,9 +10,29 @@ Sommiamo i due numeri,
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione),
 Dichiariamo chi ha vinto. */
 
-const inserireParola = prompt("Inserisci una parola");
-
-for (let i = 0; i <= inserireParola.length; i++) {
-    if (inserireParola === inserireParola[i].reverse().join())
-        inserireParola
+/* //Inserisco parola
+let parolaUtente = prompt("Inserisci una parola");
+//Preparo la variabile vuota che sarà costituita dalla parola inversa
+let parolaInversa = "";
+//Uso il ciclo for che parte dall'ultima lettera fino alla prima e aggiunge ogni lettera al contrario alla variabile parolaInversa
+for (let i = parolaUtente.length -1; i >= 0; i--) {
+    parolaInversa = parolaInversa + parolaUtente[i];
 }
+//confronto le due parole
+if (parolaUtente === parolaInversa) {
+    console.log("La parola è palindroma");
+} else {
+    console.log("La parola NON è palindroma");
+} */
+
+//L'utente sceglie tra pari o dispari
+//let parolaUtente = prompt("Scegli tra pari o dispari");
+//Poi inserisce un numero da 1 a 5
+//let numeroUtente = prompt ("Scegli un numero da 1 a 5");
+
+// Funzione che genera un numero casuale tra min e max
+function numeriRandom (min, max) {
+    return Math.floor(Math.random()* (max - min +1)) + min;
+}
+
+console.log(numeriRandom(1, 5));
