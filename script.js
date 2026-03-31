@@ -28,11 +28,21 @@ if (parolaUtente === parolaInversa) {
 //L'utente sceglie tra pari o dispari
 //let parolaUtente = prompt("Scegli tra pari o dispari");
 //Poi inserisce un numero da 1 a 5
-//let numeroUtente = prompt ("Scegli un numero da 1 a 5");
+let numeroUtente = parseInt(prompt ("Scegli un numero da 1 a 5"));
+//Variabile con il numero estratto dal computer
+let numeroComputer = numeriRandomComputer(1, 5);
+//Variabile che contiene il risultato della somma di utente e computer
+let risultato = sommaNumeri(numeroUtente, numeroComputer);
+
 
 // Funzione che genera un numero casuale tra min e max
-function numeriRandom (min, max) {
-    return Math.floor(Math.random()* (max - min +1)) + min;
+function numeriRandomComputer(min, max) {
+    return Math.floor(Math.random()* (max - min + 1)) + min;
 }
+console.log(numeroComputer)
 
-console.log(numeriRandom(1, 5));
+//Funzione che genera la somma
+function sommaNumeri(a, b) {
+    return a + b;
+}
+console.log(risultato); 
