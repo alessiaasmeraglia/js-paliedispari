@@ -33,16 +33,40 @@ let numeroUtente = parseInt(prompt ("Scegli un numero da 1 a 5"));
 let numeroComputer = numeriRandomComputer(1, 5);
 //Variabile che contiene il risultato della somma di utente e computer
 let risultato = sommaNumeri(numeroUtente, numeroComputer);
+//Variabile che contiene l'esito della punzione pariOdispari
+let esito = pariOdispari(risultato);
 
 
-// Funzione che genera un numero casuale tra min e max
+//Funzione che genera un numero casuale tra min e max
 function numeriRandomComputer(min, max) {
     return Math.floor(Math.random()* (max - min + 1)) + min;
 }
-console.log(numeroComputer)
-
+console.log("Numero utente:", numeroUtente);
+console.log("Numero computer:", numeroComputer);
 //Funzione che genera la somma
 function sommaNumeri(a, b) {
     return a + b;
 }
-console.log(risultato); 
+//console.log(risultato); 
+
+//Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function pariOdispari(n) {
+    if (n % 2 === 0) {
+        return "pari";
+    }else{
+        return "dispari";
+    }
+}
+console.log("La somma è:",esito)
+
+//Dichiariamo chi ha vinto
+function controllaVincitore(numeroUtente, esito){
+    if (numeroUtente === esito) {
+        return "Hai vinto";
+    } else {
+        return "Ha vinto il computer";
+    }
+}
+
+let vincitore = controllaVincitore(numeroUtente, esito);
+console.log(vincitore);
