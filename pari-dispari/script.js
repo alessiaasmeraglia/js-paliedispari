@@ -56,7 +56,7 @@ function controllaVincitore(parolaUtente, esito){
     }
 }
 
-//Funzione per controllare che parola e numero utente corrisponda
+//Funzione per controllare che parola e numero utente siano coerenti
 function controllaParolaNumero(parolaUtente, numeroUtente) {
     return parolaUtente === pariOdispari(numeroUtente);
 } 
